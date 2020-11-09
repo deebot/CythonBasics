@@ -11,3 +11,16 @@ To create shared object library. Compile using following command
 After you have the .so file.To test the speed run the code timing_test.py using command below
   
     python timing_test.py
+    
+## <u>WrapperC</u>
+This folder contains an example to create a  wrapper for C code.
+
+🔨 Build using following command
+
+    make
+
+clean using
+    
+    make clean
+    
+
