@@ -19,6 +19,23 @@ This folder contains an example to create a  wrapper for C code.
 
     make
 
+💡 TO test the wrapper.In terminal run
+
+    ipython3
+
+Then import the module
+
+    import mt_random as mt
+
+Run the command to give initial seed. Here we pass 1000
+
+    mt.init_state(1000)
+
+Generate random number
+
+    mt.rand_int32()
+    
+
 clean using
     
     make clean
