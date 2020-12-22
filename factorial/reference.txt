@@ -1,0 +1,24 @@
+List of references used and note on Issues faced
+
+https://en.wikipedia.org/wiki/Cython
+https://notes-on-cython.readthedocs.io/en/latest/function_declarations.html
+https://pythonprogramming.net/introduction-and-basics-cython-tutorial/
+
+Adding or modifying cython compiler directives
+----------------------------------------------
+https://cython.readthedocs.io/en/latest/src/userguide/source_files_and_compilation.html#compiler-directives
+
+Profiling:
+
+https://cython.readthedocs.io/en/latest/src/tutorial/profiling_tutorial.html#profiling-basics
+https://sklearn.org/developers/performance.html
+https://stackoverflow.com/questions/24144931/python-line-profiler-and-cython-function/47407621
+https://nbviewer.jupyter.org/gist/tillahoffmann/296501acea231cbdf5e7
+
+Issue: LineProfiler.show_func uses inspect.getblock to get the lines of the profiled function. This doesn't work for cpdef functions.
+
+Workaround for above issue
+-------------------------
+In the .pyx file, add a “def” (no cdef or cpdef) function at the end of the file.
+https://github.com/pyutils/line_profiler/issues/13
+ 
